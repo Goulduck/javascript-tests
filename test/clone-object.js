@@ -1,9 +1,9 @@
 describe('clone object', function () {
   it('should clone an object', function () {
-    var expected = {name: 'Ahmed', age: 27, skills: ['cycling', 'walking', 'eating']},
-        obj = {};
+    var expected = {name: 'Chris', age: 30, skills: ['JavaScript', 'PHP', 'MySQL']},
+        obj = JSON.parse(JSON.stringify(expected))
 
-    expect(obj).toEqual(expected);
-    expect(obj).not.toBe(expected);
-  });
-});
+    expect(obj).toEqual(expected)
+    expect(obj).not.toBe(expected)
+  })
+})
